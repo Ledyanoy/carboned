@@ -1,5 +1,5 @@
 {
-  "name": "booking",
+  "name": "carboned",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ledyanoy/Booking.git"
+    "url": "git+https://github.com/Ledyanoy/carboned.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ledyanoy/Booking/issues"
+    "url": "https://github.com/Ledyanoy/carboned/issues"
   },
-  "homepage": "https://github.com/Ledyanoy/Booking#readme",
+  "homepage": "https://github.com/Ledyanoy/carboned#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-imagemin": "^6.0.0",
+    "gulp-svg-sprite": "^1.5.0",
     "imagemin-jpeg-recompress": "^6.0.0"
   },
   "dependencies": {

@@ -11,6 +11,7 @@ var gulp = require('gulp');
     imgCompress  = require('imagemin-jpeg-recompress');
     newer = require("gulp-newer");
     del = require('del');
+    svg = require('gulp-svg-sprite');
     
       
 gulp.task('browser-sync', function() {
@@ -68,12 +69,27 @@ gulp.task('img', function() {
 });
 
 
-gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'sass', 'img')));
+gulp.task('svg', function () {
+  return gulp.src('app/svg/*.svg') 
+      .pipe(svg({
+              mode: {
+                  stack: {
+                      sprite: "../sprite.svg" 
+                  }
+              },
+          }
+      ))
+      .pipe(gulp.dest('dist/svg/'));
+});
+
+
+gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'sass', 'img', 'svg')));
 
 gulp.task('watch', function() {
     gulp.watch('app/pug/**/*.pug', gulp.parallel('pug'));
     gulp.watch('app/sass/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/img/**/*', gulp.parallel('img'));
+    gulp.watch('app/svg/*', gulp.parallel('svg'));
     gulp.watch('app/js/**/*.js', reload);
 });
 
