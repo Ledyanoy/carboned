@@ -10,6 +10,7 @@ var gulp = require('gulp');
     imagemin     = require('gulp-imagemin'),
     imgCompress  = require('imagemin-jpeg-recompress');
     newer = require("gulp-newer");
+    del = require('del');
     
       
 gulp.task('browser-sync', function() {
@@ -19,6 +20,10 @@ gulp.task('browser-sync', function() {
         },
         notify: false
     });    
+});
+
+gulp.task('clean', function() {
+  return del(["dist"]);
 });
 
 gulp.task('pug', function() {
@@ -61,6 +66,9 @@ gulp.task('img', function() {
     .pipe(gulp.dest('dist/img'))
     .pipe(browserSync.stream());
 });
+
+
+gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'sass', 'img')));
 
 gulp.task('watch', function() {
     gulp.watch('app/pug/**/*.pug', gulp.parallel('pug'));
