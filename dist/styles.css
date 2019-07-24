@@ -73,10 +73,18 @@ input {
   .text--bold {
     font-weight: bold; }
 
+.text-h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0; }
+
 .logo {
   width: 200px;
   display: block;
   margin: 0 auto; }
+
+.main-section {
+  padding: 10px 0; }
 
 .wrapper {
   max-width: 1080px;
@@ -88,7 +96,7 @@ input {
 .items-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
 .item {
   width: 48%; }
@@ -117,7 +125,7 @@ input {
 
 .item-header {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
@@ -125,6 +133,30 @@ input {
 
 .item-links {
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
   opacity: 0;
-  transition: 0.4s all; }
+  transform: translate(-50%, -50%); }
+
+.item-question {
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  max-width: 150px;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #000000; }
+  .item-question:last-child {
+    margin-bottom: 0; }
+  .item-question:hover {
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #000000; }
