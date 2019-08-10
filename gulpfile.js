@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 browserSync = require("browser-sync");
-function reload() {
+function reload(done) {
   browserSync.reload();
   done();
 }
@@ -42,6 +42,13 @@ gulp.task("sass", function() {
   return gulp
     .src("app/sass/**/*.scss")
     .pipe(sass())
+    .pipe(gulp.dest("dist"))
+    .pipe(browserSync.stream());
+});
+
+gulp.task("js", function() {
+  return gulp
+    .src("app/js/**/*.js")
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 });
@@ -92,7 +99,7 @@ gulp.task("svg", function() {
 
 gulp.task(
   "build",
-  gulp.series("clean", gulp.parallel("pug", "sass", "img", "svg"))
+  gulp.series("clean", gulp.parallel("pug", "sass", "img", "svg", "js"))
 );
 
 gulp.task("watch", function() {
@@ -100,7 +107,7 @@ gulp.task("watch", function() {
   gulp.watch("app/sass/**/*.scss", gulp.parallel("sass"));
   gulp.watch("app/img/**/*", gulp.parallel("img"));
   gulp.watch("app/svg/*", gulp.parallel("svg"));
-  gulp.watch("app/js/**/*.js", reload);
+  gulp.watch("app/js/**/*.js", gulp.parallel("js"));
 });
 
 gulp.task("default", gulp.parallel("browser-sync", "watch"));
