@@ -24,7 +24,7 @@
 
 // function renderOther (item) {
 //     var city = document.querySelector('.cityother');
-    
+
 //     city.innerHTML += `<div><h2>${item.city_name}</h2></div>`;
 // }
 
@@ -50,6 +50,6 @@
 //     xhr.send();
 // }
 console.log('работает script.js');
-var newScript = document.createElement('div');
-newScript.innerHTML = ('<script src="main.js"></script>');
+var newScript = document.createElement("script");
+newScript.src = "main.js";
 document.body.appendChild(newScript);
