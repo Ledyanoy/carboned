@@ -53,3 +53,80 @@ console.log('работает script.js');
 var newScript = document.createElement("script");
 newScript.src = "main.js";
 document.body.appendChild(newScript);
+
+var lamboList = document.querySelector('.main-lambo-list');
+
+var lamboListItems = document.querySelectorAll('.main-lambo-list__item');
+
+// lamboListItems.forEach((elem) => {
+
+//     elem.addEventListener('mouseover', (evt) => {
+
+//         lamboListItems.forEach((item) => {
+//             item.classList.remove('unhovered');
+//             if (item !== evt.target.closest('.main-lambo-list__item')) {
+//                 item.classList.add('unhovered')
+//             }
+//         });
+//         // evt.target.closest('.main-lambo-list__item').classList.remove('vot');
+//     });
+
+//     elem.addEventListener('mouseout', () => {
+
+//         lamboListItems.forEach((item) => {
+//             item.classList.remove('unhovered');
+//         });
+//         // evt.target.closest('.main-lambo-list__item').classList.remove('vot');
+//     });
+
+// });
+
+var onHover = function (evt) {
+    if (!evt.target.closest('.main-lambo-list__item')) return;
+    lamboListItems.forEach((item) => {
+        item.classList.remove('unhovered');
+        if (item !== evt.target.closest('.main-lambo-list__item')) {
+            item.classList.add('unhovered')
+        }
+    });
+};
+
+var outHover = function (evt) {
+    if (!evt.target.closest('.main-lambo-list__item')) return;
+    lamboListItems.forEach((item) => {
+        item.classList.remove('unhovered');
+    });
+};
+
+
+
+lamboList.addEventListener('mouseover', onHover);
+lamboList.removeEventListener('mouseover', outHover);
+
+lamboList.removeEventListener('mouseout', onHover);
+lamboList.addEventListener('mouseout', outHover);
+
+
+
+
+
+// lamboListItems.forEach((elem) => {
+
+//     elem.addEventListener('mouseover', (evt) => {
+
+//         lamboListItems.forEach((item) => {
+//             item.classList.remove('unhovered');
+//             if (item !== evt.target.closest('.main-lambo-list__item')) {
+//                 item.classList.add('unhovered')
+//             }
+//         });
+//         // evt.target.closest('.main-lambo-list__item').classList.remove('vot');
+//     });
+
+//     elem.addEventListener('mouseout', () => {
+
+//         lamboListItems.forEach((item) => {
+//             item.classList.remove('unhovered');
+//         });
+//         // evt.target.closest('.main-lambo-list__item').classList.remove('vot');
+//     });

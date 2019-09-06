@@ -5,35 +5,39 @@
 }
 
 .item {
-    width: 48%; 
-    &:hover .item-content{        
-        transform: scale(1.1);                    
-    }      
-    &:hover .item-header{
-       opacity: 0;
-    } 
-    &:hover .item-links {        
-        opacity: 1;           
+    width: 48%;
+
+    &:hover .item-content {
+        transform: scale(1.1);
     }
-    &:hover .item-image {   
-    -webkit-box-shadow: 0px 6px 21px 0px #6b6b6b;
-        box-shadow: 0px 6px 21px 0px #6b6b6b; 
+
+    &:hover .item-header {
+        opacity: 0;
+    }
+
+    &:hover .item-links {
+        opacity: 1;
+    }
+
+    &:hover .item-image {
+        -webkit-clip-path: polygon(0% 0%, 50% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
+        clip-path: polygon(0% 0%, 50% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%);
     }
 }
 
 .item-content {
-    transition: 0.4s all; 
-    position: relative; 
+    transition: 0.4s all;
+    position: relative;
 }
 
 .item-image {
     width: 100%;
     height: auto;
     overflow: hidden;
-    border-radius: 5%; 
-    vertical-align: bottom; 
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);  
+    vertical-align: bottom;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    transition: clip-path 0.5s;
 }
 
 .item-header {
@@ -46,11 +50,11 @@
 }
 
 .item-links {
-    position: absolute; 
-    top:50%;
-    left: 50%;    
-    opacity: 0;     
-    transform: translate(-50%, -50%);         
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
 }
 
 .item-question {
@@ -69,9 +73,11 @@
     text-align: center;
     margin-bottom: 30px;
     background-color: $black-color;
+
     &:last-child {
         margin-bottom: 0;
     }
+
     &:hover {
         color: $black-color;
         background-color: $white-color;
