@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 browserSync = require("browser-sync");
+
 function reload(done) {
   browserSync.reload();
   done();
@@ -8,12 +9,12 @@ pug = require("gulp-pug");
 sass = require("gulp-sass");
 autoprefixer = require("gulp-autoprefixer");
 (imagemin = require("gulp-imagemin")),
-  (imgCompress = require("imagemin-jpeg-recompress"));
+(imgCompress = require("imagemin-jpeg-recompress"));
 newer = require("gulp-newer");
 del = require("del");
 svg = require("gulp-svg-sprite");
 
-gulp.task("browser-sync", function() {
+gulp.task("browser-sync", function () {
   browserSync({
     server: {
       baseDir: "dist/"
@@ -22,11 +23,11 @@ gulp.task("browser-sync", function() {
   });
 });
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del(["dist"]);
 });
 
-gulp.task("pug", function() {
+gulp.task("pug", function () {
   return gulp
     .src("app/pug/index.pug")
     .pipe(
@@ -38,7 +39,7 @@ gulp.task("pug", function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task("sass", function() {
+gulp.task("sass", function () {
   return gulp
     .src("app/sass/**/*.scss")
     .pipe(sass())
@@ -46,14 +47,14 @@ gulp.task("sass", function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task("js", function() {
+gulp.task("js", function () {
   return gulp
     .src("app/js/**/*.js")
     .pipe(gulp.dest("dist"))
     .pipe(browserSync.stream());
 });
 
-gulp.task("autoprefixer", function() {
+gulp.task("autoprefixer", function () {
   return gulp
     .src("dist/styles.css")
     .pipe(autoprefixer())
@@ -61,7 +62,7 @@ gulp.task("autoprefixer", function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task("img", function() {
+gulp.task("img", function () {
   return gulp
     .src("app/img/**/*.{jpg,jpeg,png,gif}")
     .pipe(newer("dist/img"))
@@ -82,7 +83,7 @@ gulp.task("img", function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task("svg", function() {
+gulp.task("svg", function () {
   return gulp
     .src("app/svg/*.svg")
     .pipe(
@@ -99,10 +100,10 @@ gulp.task("svg", function() {
 
 gulp.task(
   "build",
-  gulp.series("clean", gulp.parallel("pug", "sass", "img", "svg", "js"))
+  gulp.series("clean", gulp.parallel("pug", "sass", "img", "svg", "js"), "autoprefixer")
 );
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   gulp.watch("app/pug/**/*.pug", gulp.parallel("pug"));
   gulp.watch("app/sass/**/*.scss", gulp.parallel("sass"));
   gulp.watch("app/img/**/*", gulp.parallel("img"));

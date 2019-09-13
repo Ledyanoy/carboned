@@ -61,7 +61,12 @@
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
-    transition: 0.5s;
+    transition: opacity 0.5s, top 0.5s;
+
+
+    &--second {
+        opacity: 0;
+    }
 
 
 }
