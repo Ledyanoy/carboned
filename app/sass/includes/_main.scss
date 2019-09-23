@@ -9,7 +9,8 @@
     margin-bottom: 20px;
 
     & h2 {
-        margin: 30px 0;
+        margin-bottom: 30px;
+        margin-top: 50px;
     }
 }
 
@@ -135,4 +136,37 @@
         grid-column: 2/4;
         grid-row: 3/5;
     }
+}
+
+.characteristics h2 {
+    margin-bottom: 50px;
+}
+
+.characteristics__list {
+    padding-top: 20px;
+}
+
+.characteristics__left-pic {
+    float: left;
+    max-width: 40%;
+    shape-outside: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+}
+
+.characteristics__right-pic {
+    float: right;
+    max-width: 40%;
+    shape-outside: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.characteristics__list .text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.characteristics__list .text:not(:last-child) {
+    margin-bottom: 50px;
 }
