@@ -1,0 +1,23 @@
+.characteristics {
+    background-color: $black-color;
+    color: $white-color;
+
+    & h2 {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        padding-top: 20px;
+    }
+
+    &__list .text {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    &__list .text:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+}
