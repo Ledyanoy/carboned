@@ -5,12 +5,38 @@
 }
 
 .main-section {
-    padding: 10px 0;
-    margin-bottom: 20px;
+    padding: 30px 0 60px;
 
-    & h2 {
+    & h2,
+    & h1 {
         margin-bottom: 30px;
-        margin-top: 50px;
+        margin-top: 0;
+    }
+
+    &--back {
+        background-color: $carbon;
+        background-image: url('img/back.jpg');
+        background-repeat: repeat;
+        position: relative;
+        padding-top: 60px;
+        box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.75);
+
+        & .text {
+            color: $white-color;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 60px;
+            width: 60px;
+            background-color: $white-color;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%) rotate(45deg);
+        }
     }
 }
 
@@ -25,6 +51,13 @@
     border-radius: 25px;
     position: relative;
     margin-bottom: 20px;
+
+    & &__header,
+    & .text--standart {
+        color: $carbon;
+        background-color: transparent;
+    }
+
 
     &::before {
         content: '“';
@@ -46,7 +79,7 @@
 }
 
 .main__link {
-    color: $black-color;
+    color: $lambo-yellow;
 }
 
 .main-lambo-list {

@@ -107,6 +107,28 @@ lamboList.removeEventListener('mouseout', onHover);
 lamboList.addEventListener('mouseout', outHover);
 
 
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    autoHeight: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    lazy: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    autoHeight: true,
+    lazy: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: galleryThumbs,
+    },
+});
+
 
 
 

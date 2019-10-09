@@ -1,23 +1,60 @@
 .characteristics {
-    background-color: $black-color;
-    color: $white-color;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
 
     & h2 {
         margin-bottom: 50px;
     }
 
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
     &__list {
-        padding-top: 20px;
+        position: absolute;
+        top: 15%;
+        left: 60px;
+        max-width: 300px;
+        width: 75%;
+
+        & li {
+            padding-left: 25px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 7px;
+                display: block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $lambo-yellow;
+            }
+        }
+    }
+
+    &__lambo-logo {
+        position: absolute;
+        bottom: 7%;
+        width: 30%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__list .text {
-        text-align: center;
-        font-weight: bold;
-        font-size: 18px;
+
+        font-size: 22px;
+        line-height: 30px;
     }
 
     &__list .text:not(:last-child) {
         margin-bottom: 20px;
     }
+
+
 
 }

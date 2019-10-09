@@ -1,0 +1,25 @@
+.swiper__outer {
+
+    & img {
+        vertical-align: bottom;
+    }
+
+    & .gallery-top {
+        margin-bottom: 10px;
+    }
+
+    & .gallery-top .swiper-slide {
+        text-align: center;
+    }
+
+    & .gallery-thumbs .swiper-slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    & h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+}
