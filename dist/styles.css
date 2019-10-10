@@ -361,3 +361,20 @@ input {
 .swiper__outer h2 {
   margin-top: 60px;
   margin-bottom: 60px; }
+
+.order {
+  display: flex;
+  justify-content: space-between; }
+  .order__pic {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center; }
+  .order__icon {
+    fill: #120D0D;
+    width: 100%;
+    height: 100%; }
+  .order__list {
+    display: flex; }
+  .order__link {
+    text-decoration: none; }
