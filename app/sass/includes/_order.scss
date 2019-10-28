@@ -3,10 +3,12 @@
     justify-content: space-between;
 
     &__pic {
-        height: 100px;
-        width: 100px;
-        margin: 0 auto;
-        text-align: center;
+        height: 70px;
+        width: 70px;
+        margin: 10px auto;
+        text-align: center; 
+        border-radius: 10px;  
+        overflow: hidden;     
     }
 
     &__icon {
@@ -16,10 +18,23 @@
     }
 
     &__list {
-        display: flex;
+        display: flex; 
+        margin-left: -5px;       
     }
 
     &__link {
         text-decoration: none;
     }
+}
+
+.order-list__item {
+    width: 80px;
+    & .text {
+        font-size: 14px;
+        text-align: center;        
+    }
+}
+
+.order-list__link {    
+    text-decoration: none;  
 }

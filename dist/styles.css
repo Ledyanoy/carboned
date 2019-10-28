@@ -366,15 +366,27 @@ input {
   display: flex;
   justify-content: space-between; }
   .order__pic {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
-    text-align: center; }
+    height: 70px;
+    width: 70px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; }
   .order__icon {
     fill: #120D0D;
     width: 100%;
     height: 100%; }
   .order__list {
-    display: flex; }
+    display: flex;
+    margin-left: -5px; }
   .order__link {
     text-decoration: none; }
+
+.order-list__item {
+  width: 80px; }
+  .order-list__item .text {
+    font-size: 14px;
+    text-align: center; }
+
+.order-list__link {
+  text-decoration: none; }
