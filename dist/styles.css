@@ -240,6 +240,20 @@ input {
   padding-left: 40px;
   padding-right: 40px; }
 
+html, body {
+  height: 100%; }
+
+.height-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+.content {
+  flex: 1 0 auto; }
+
+.footer {
+  flex: 0 0 auto; }
+
 .items-list {
   display: flex;
   justify-content: space-between;
@@ -370,7 +384,8 @@ input {
 
 .order {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  max-width: 600px; }
   .order__pic {
     height: 70px;
     width: 70px;
@@ -408,3 +423,12 @@ input {
 
 .price__description {
   margin-top: 20px; }
+
+.footer {
+  background-image: url(img/back.jpg);
+  background-size: cover;
+  box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75); }
+
+.footer__text {
+  color: #f0f0f0;
+  padding: 20px 0; }

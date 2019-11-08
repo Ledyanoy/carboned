@@ -9,17 +9,17 @@ section.main-section
                     div.item-content                 
                         img.item-image(src="img/x-header.jpg")
                         div.item-links
-                            a.item-question.item-question--what(href="") Что это такое
-                            a.item-question.item-question--more(href="") Больше фото
-                            a.item-question.item-question--order(href="") Заказать
+                            a.item-question.item-question--what(href="#about") Что это такое
+                            a.item-question.item-question--more(href="#photos") Больше фото
+                            a.item-question.item-question--order(href="#order") Заказать
             li.item
                 p.item-header Xs Max 
                 div.item-content               
                     img.item-image(src="img/xmax-header.jpg")
                     div.item-links
-                        a.item-question.item-question--what(href="") Что это такое
-                        a.item-question.item-question--more(href="") Больше фото
-                        a.item-question.item-question--order(href="") Заказать
+                        a.item-question.item-question--what(href="#about") Что это такое
+                        a.item-question.item-question--more(href="#photos") Больше фото
+                        a.item-question.item-question--order(href="#order") Заказать
 
 section.main-section.main-section--back(id="about")
     div.wrapper
@@ -37,7 +37,7 @@ section.main-section.main-section--back(id="about")
         p.text.text--standart.text--center Мы знаем, что Lamborginin умеют делать вещи. 
         p.text.text--standart.text--center А Forged Carbon - это тот же самый карбон, но только с новым, необычным дизайном.
     
-section.main-section(id="about")
+section.main-section
     div.wrapper
         h2.text-h1.text Приемущества карбонового чехла
         ul.main-lambo-list
@@ -80,7 +80,7 @@ section.main-section.main-section--back
                 li.text Самая доступная цена в Р.Ф. и СНГ 
             img(src="img/l-logo.png").characteristics__lambo-logo       
 
-    .swiper__outer.wrapper
+    .swiper__outer.wrapper(id="photos")
         h2.text-h1.text Фотогалерея
         div.swiper-container.gallery-top
             ul.swiper-wrapper
@@ -155,7 +155,7 @@ section.main-section.main-section--back
                 li.swiper-slide                
                     img(src="img/gallery/11.jpg", alt="")
 
-section.main-section.main-section--yellow
+section.main-section.main-section--yellow(id="order")
     h2.text-h1.text Цена 
     .wrapper.price
         p.item-header.item-header--price 3500 руб.
@@ -178,25 +178,25 @@ section.main-section
             p.text Напишите нам +7 (912) 053 53 53
             ul.order__list           
                 li.order-list__item
-                    a(href="").order-list__link
+                    a(href="tg://resolve?domain=<apauers>").order-list__link
                         .order__pic
                             svg.order__icon
                                 use(xlink:href="#telegram")
                         p.text Telegram
                 li.order-list__item
-                    a(href="").order-list__link
+                    a(href="https://wa.me/79120535353").order-list__link
                         .order__pic
                             svg.order__icon
                                 use(xlink:href="#whatsapp")
                         p.text Whatsapp
                 li.order-list__item
-                    a(href="").order-list__link
+                    a(href="viber://add?number=89120535353").order-list__link
                         .order__pic
                             svg.order__icon
                                 use(xlink:href="#viber")
                         p.text Viber
                 li.order-list__item
-                    a(href="").order-list__link
+                    a(href="https://www.instagram.com/carbon_ed/" target="_blank").order-list__link
                         .order__pic
                             svg.order__icon
                                 use(xlink:href="#instragram")
