@@ -48,6 +48,9 @@
     margin-bottom: 10px;
     transition: 0.4s all;
     color: $carbon;
+    &--price {
+        font-size: 30px;
+    }
 }
 
 .item-links {
