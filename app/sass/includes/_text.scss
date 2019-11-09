@@ -10,6 +10,14 @@
         line-height: 45px;
         letter-spacing: 0.5px;
         position: relative;
+        @media (max-width: 380px) {
+            // display: block;   
+            // line-height: 22px;  
+            // max-width: 320px;
+            // margin: 0 auto;
+            // box-sizing: border-box; 
+            font-size: 14px;
+        }
 
         &::before {
             position: absolute;
@@ -64,9 +72,18 @@
     opacity: 1;
     transition: opacity 0.5s, top 0.5s;
 
+    @media (max-width:749px) {
+        font-size: 16px;
+        max-width: 80%;        
+    }
+    @media (max-width:499px) {
+        font-size: 14px;              
+    }
+
+
 
     &--second {
-        opacity: 0;
+        opacity: 0;        
     }
 
 

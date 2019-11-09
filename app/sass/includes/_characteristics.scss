@@ -18,6 +18,9 @@
         left: 60px;
         max-width: 300px;
         width: 75%;
+        @media (max-width: 380px) {
+            top: 10%;     
+        }
 
         & li {
             padding-left: 25px;
@@ -49,6 +52,9 @@
 
         font-size: 22px;
         line-height: 30px;
+        @media (max-width: 360px) {
+            font-size: 16px;     
+        }
     }
 
     &__list .text:not(:last-child) {

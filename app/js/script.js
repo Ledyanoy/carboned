@@ -23,11 +23,11 @@ var outHover = function (evt) {
 
 
 
-lamboList.addEventListener('mouseover', onHover);
-lamboList.removeEventListener('mouseover', outHover);
+lamboList.addEventListener('mouseover touchstart', onHover);
+lamboList.removeEventListener('mouseover touchstart', outHover);
 
-lamboList.removeEventListener('mouseout', onHover);
-lamboList.addEventListener('mouseout', outHover);
+lamboList.removeEventListener('mouseout touchstart', onHover);
+lamboList.addEventListener('mouseout touchstart', outHover);
 
 // swiper starts
 var galleryThumbs = new Swiper('.gallery-thumbs', {
