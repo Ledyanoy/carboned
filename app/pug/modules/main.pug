@@ -158,7 +158,7 @@ section.main-section.main-section--back
 section.main-section.main-section--yellow(id="order")
     h2.text-h1.text Цена 
     .wrapper.price
-        p.item-header.item-header--price 3500 руб.
+        p.item-header.item-header--price 2500 руб.
         p.text.price__description Каждый чехол в подарочной коробке!
         
             
@@ -167,14 +167,14 @@ section.main-section.main-section--yellow(id="order")
 section.main-section
     h2.text-h1.text Как заказать
     .wrapper.order
-        a.order__call.order__link(href="tel: 8 912 053 53 53")
+        a.order__call.order__link.order__block-mobile(href="tel: 8 912 053 53 53")
             p.text Позвоните нам
             .order__pic
                 svg.order__icon
                     use(xlink:href="#iphone-call")
             p.text 8 (912) 053 53 53
             
-        .order__by-text
+        .order__by-text.order__block-mobile
             p.text Напишите нам +7 (912) 053 53 53
             ul.order__list           
                 li.order-list__item
@@ -200,4 +200,9 @@ section.main-section
                         .order__pic
                             svg.order__icon
                                 use(xlink:href="#instragram")
-                        p.text Директ           
+                        p.text Директ 
+
+        a.order__by-avito(href="https://www.avito.ru/izhevsk/telefony/premialnaya_nakladka_iz_karbona_dlya_iphone_10_x_1788987329" target="_blank") 
+            p.text Через Avito
+            .order__pic.order__pic--avito
+                img.order__by-avito-image(src="img/avito.png", alt="")

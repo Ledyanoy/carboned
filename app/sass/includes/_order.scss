@@ -1,9 +1,9 @@
 .order {
     display: flex;
-    justify-content: space-between;
-    max-width: 600px;
+    justify-content: space-around;
+    
 
-    @media (max-width: 529px) {
+    @media (max-width: 720px) {
         display: block;
     }
 
@@ -14,6 +14,14 @@
         text-align: center;
         border-radius: 10px;
         overflow: hidden;
+
+        &--avito {
+            padding: 5px;
+            box-sizing: border-box;
+            transition: all 0.2s;
+        }
+
+
 
         @media (max-width:499px) {
             height: 50px;
@@ -37,15 +45,54 @@
     &__link {
         text-decoration: none;
 
-        @media (max-width: 529px) {
+        @media (max-width: 720px) {
             max-width: 200px;
             display: block;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 30px;
+            
         }
 
+    }
+
+    &__by-avito{
+        text-decoration: none;  
+        &:hover .order__pic--avito {
+            padding: 0;
+        }  
+        @media (max-width: 720px) {
+            text-align: center;
+            max-width: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }   
+    }   
+
+    &__by-avito-image{
+        height: 100%;
+        width: auto;
+    }
+
+    &__block-mobile {
+        @media (max-width: 720px) {
+
+        position: relative;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #F9CE5C;
+                position: absolute;
+                bottom: -15px;
+                max-width: 200px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 }
 
@@ -77,11 +124,12 @@
     flex-grow: 1;
     text-align: center;
 
-    @media (max-width: 529px) {
+    @media (max-width: 720px) {
         max-width: 300px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 30px;        
     }
 }
 
